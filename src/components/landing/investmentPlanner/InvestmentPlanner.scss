@@ -1,0 +1,143 @@
+.investment-planner {
+    text-align: center;
+    padding: 40px;
+    background: #f8f9fa;
+  
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+  
+    .buttons {
+      display: flex;
+      justify-content: center;
+      // gap: 15px;
+      margin-bottom: 30px;
+  
+      button {
+        padding: 12px 20px;
+        border: 1px solid #002f6c;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+      }
+  
+      .primary {
+        background: white;
+        color: #002f6c;
+        border-radius: 10px 0px 0px 10px;
+      }
+  
+      .secondary {
+        background: #002f6c;
+        color: white;
+        border-radius: 0px 10px 10px 1px;
+        border: 1px solid #002f6c;
+      }
+  
+      button:hover {
+        opacity: 0.8;
+      }
+    }
+  
+    .investment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+  
+      .investment-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: background 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+  
+        .icon {
+          font-size: 30px;
+          transition: color 0.3s ease;
+        }
+  
+        h3 {
+          margin-top: 10px;
+          font-size: 16px;
+          transition: color 0.3s ease;
+        }
+  
+        &:hover {
+          background: #002f6c;
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
+          .icon, h3 {
+            color: white;
+          }
+        }
+      }
+    }
+  
+
+
+  @media (max-width: 768px) {
+    .investment-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .buttons {
+      flex-direction: row;
+
+      button {
+        padding: 10px;
+        border: 1px solid #002f6c;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+      }
+    }
+  }
+
+}
+
+
+  @media (max-width: 330px) {
+    .investment-planner{
+
+      padding: 10px;
+      .investment-grid {
+        grid-template-columns: repeat(1 , 1fr);
+      max-width: 150px;
+      ;
+
+      .investment-card{
+        font-size: 10px;
+        padding: 5px;
+
+        .icon, h3{
+          font-size: 15px;
+        }
+
+
+      }
+
+      }
+    }
+    
+}
+  

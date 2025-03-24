@@ -1,0 +1,204 @@
+.out-coursel {
+    background-color: #e3f2fd;
+    padding: 0px;
+  }
+  
+  .carousels-container {
+    max-width: 85%;  /* Increased left & right margin */
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  
+    .latest-posts {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .carousel-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  
+    /* Hide Swiper default buttons but keep functionality */
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none !important;
+    }
+  
+    /* Navigation Buttons */
+    .nav-btn {
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        z-index: 100;
+        padding: 10px; /* Added extra inner space */
+      
+        &:hover {
+          background: rgb(0, 0, 0);
+        }
+      }
+      
+      .left {
+        left: -15px;
+      }
+      
+      .right {
+        right: -15px;
+      }
+  
+    .left {
+      left: -30px; 
+    }
+  
+    .right {
+      right: -30px;
+    }
+  
+    .swiper {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    /* Ensure all cards have the same height */
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      min-height: 320px;  /* Same height for all cards */
+      height: 320px;
+      margin: 0 15px;  /* Added extra margin for spacing */
+  
+      .card-image {
+        position: relative;
+  
+        img {
+          width: 100%;
+          height: 180px;  /* Fixed image height */
+          object-fit: cover;
+          margin-bottom: 0;
+        }
+  
+        .tag {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          background: black;
+          color: white;
+          padding: 5px 10px;
+          font-size: 12px;
+          border-radius: 5px;
+        }
+      }
+  
+      .card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        text-align: left;
+  
+        h3 {
+          font-size: 18px;
+          margin: 0;
+        }
+  
+        p {
+          font-size: 14px;
+          color: #666;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .carousels-container {
+      max-width: 90%; /* Slightly reduce margin on large screens */
+    }
+  
+    .card {
+      min-height: 300px;
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousels-container {
+      max-width: 95%;
+    }
+  
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        padding: 8px; /* Adjust inner padding for smaller screens */
+      }
+  
+    .left {
+      left: 5px;
+    }
+  
+    .right {
+      right: 5px;
+    }
+  
+    .card {
+      min-height: 280px;
+      height: 280px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav-btn {
+      display: none !important; /* Forces it to hide */
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .carousels-container {
+      max-width: 98%;
+    }
+  
+    .card {
+      min-height: 250px;
+      height: 250px;
+    }
+  
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        padding: 6px; /* Reduce inner padding for very small screens */
+      }
+  
+    .left {
+      left: 0px;
+    }
+  
+    .right {
+      right: 0px;
+    }
+  }
+  

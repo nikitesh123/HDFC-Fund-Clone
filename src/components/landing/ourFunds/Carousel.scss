@@ -1,0 +1,229 @@
+$primary-color: #002366; 
+$secondary-color: #e3f2fd; 
+$button-blue: #002366;
+$button-hover: #001a4d;
+$green-text: #16a34a;
+$gray-text: #4b5563;
+$card-shadow: rgba(0, 0, 0, 0.1);
+$border-radius: 12px;
+
+.out-coursel {
+  background-color: #e3f2fd;
+  padding: 20px 0; /* Add vertical padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousels-container {
+  width: 90%;
+  max-width: 1300px; /* Prevents excessive stretching */
+  margin: auto;
+  text-align: center;
+
+  .our-funds {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Hide default Swiper buttons */
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+
+  /* Navigation Buttons */
+  .nav-btn {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    z-index: 100;
+    padding: 10px;
+
+    &:hover {
+      background: rgb(0, 0, 0);
+    }
+  }
+
+  .left {
+    left: 5px;
+  }
+
+  .right {
+    right: 5px;
+  }
+
+  .swiper {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  /* Ensure all cards have equal height & proper spacing */
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fund-card {
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 10px $card-shadow;
+    text-align: left;
+    width: 100%;
+    max-width: 320px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    padding: 0 15px;
+
+    }
+
+    .return-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px;
+    padding: 0 15px;
+
+
+      .period-btn {
+        padding: 10px;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        font-size: 12px;
+
+        &.active {
+          background: #007bff;
+          color: #fff;
+        }
+      }
+    }
+
+    .card-details p {
+      margin: 5px 0;
+      font-size: 14px;
+    padding: 0 15px;
+
+    }
+  }
+
+  .suggested-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      width: 50%;
+      text-align: center;
+    }
+
+    .know-more-btn {
+      background: white;
+      color: #002f6c;
+      border-radius: 0px 0px 0px 10px;
+    }
+
+    .invest-now-btn {
+      background: #002f6c;
+      color: white;
+      border-radius: 0px 0px 10px 0px;
+      border: 1px solid #002f6c;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .carousels-container {
+    max-width: 95%;
+  }
+
+  .fund-card {
+    min-height: 300px;
+  }
+
+  .swiper {
+    padding: 15px 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousels-container {
+    max-width: 100%;
+  }
+
+  .fund-card {
+    min-height: 280px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .left {
+    left: 0px;
+  }
+
+  .right {
+    right: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-btn {
+    display: none !important; /* Hide buttons */
+  }
+
+  .fund-card {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fund-card {
+    min-height: 230px;
+  }
+
+  .swiper {
+    padding: 10px;
+  }
+}

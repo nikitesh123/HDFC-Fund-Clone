@@ -1,0 +1,120 @@
+.shorts-section {
+    text-align: center;
+    padding: 20px;
+
+    .title {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .shorts-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        max-width: 80%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+
+        .short-card {
+            width: 100%;
+            border-radius: 10px;
+            border: 3px solid #002f6c;
+            overflow: hidden;
+            background-color: #f8f8f8;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            position: relative;
+
+            .short-image {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 2/3;
+                object-fit: cover;
+                display: block;
+            }
+
+            .short-number {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                color: white;
+                padding: 5px 10px;
+                font-size: 1rem;
+                font-weight: bold;
+                border-radius: 5px;
+            }
+
+            .short-title {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                color: white;
+                padding: 5px;
+                font-size: 0.8rem;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    }
+
+    .view-all {
+        display: block;
+        margin-top: 10px;
+        font-size: 1rem;
+        color: blue;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Responsiveness Fix */
+    @media (max-width: 1024px) {
+        .shorts-container {
+            max-width: 90%;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .shorts-container {
+            max-width: 95%;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .shorts-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .shorts-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* ✅ Fix for Galaxy Fold (280px width) */
+    @media (max-width: 320px) {
+        .shorts-section {
+            padding: 0;
+            margin: 0;
+        }
+
+        .shorts-container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .short-card {
+            border-radius: 5px;
+            border: 2px solid #002f6c;
+        }
+
+        .title, .view-all {
+            margin: 5px 0;
+        }
+    }
+}

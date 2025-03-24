@@ -1,0 +1,194 @@
+.hdfc-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: #fff;
+  gap: 80px; 
+
+  .hdfc-content {
+    max-width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem); 
+      font-weight: bold;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.5rem); 
+      font-weight: bold;
+      margin: 0;
+      .blue {
+        color: #007bff;
+      }
+      .red {
+        color: #dc3545;
+      }
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+    }
+
+    .buttons {
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 1rem;
+
+      .explore, .sip {
+        padding: 12px 20px;
+        font-size: clamp(0.9rem, 2vw, 1rem); 
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      .explore {
+        border: 1px solid #686868a3;
+        background: white;
+      }
+      .sip {
+        background: #002a63;
+        color: white;
+        border: none;
+      }
+    }
+
+    .stats {
+      display: flex;
+      gap: 1.5rem; 
+      justify-content: center;
+      margin-top: 1rem;
+
+      div {
+        text-align: center;
+        span {
+          font-weight: bold;
+          font-size: clamp(1.2rem, 3vw, 1.5rem);
+        }
+        p {
+          font-size: clamp(0.9rem, 2.2vw, 1rem);
+        }
+      }
+    }
+  }
+
+
+  .hdfc-image-wrapper {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .carousel {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    max-width: 100px;
+    z-index: 10;
+    right: 90px;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 90px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+ 
+  .hdfc-image {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    z-index: 5;
+
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
+}
+
+@media (max-width: 1024px) { 
+  .hdfc-container {
+    gap: 60px; 
+  }
+
+  .hdfc-content {
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2rem);
+    }
+    p {
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+    .stats div span {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    }
+  }
+
+  .hdfc-image-wrapper {
+    width: 200px;
+    height: 300px;
+  }
+
+  .carousel {
+    top: -80px;
+    max-width: 140px;
+    left: 20px;
+    img {
+      max-height: 80px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hdfc-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 2rem;
+  }
+
+  .hdfc-content {
+    max-width: 90%;
+    h1 {
+      font-size: clamp(1.5rem, 3vw, 1.8rem);
+    }
+    p {
+      font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+    .stats div span {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+  }
+
+  .hdfc-image-wrapper {
+    width: 180px;
+    height: 280px;
+  }
+
+  .hdfc-image {
+    width: 180px;
+    height: 280px;
+  }
+
+  .carousel {
+    top: -70px;
+    left: 60px;
+    max-width: 130px;
+    img {
+      max-height: 75px;
+    }
+  }
+}
